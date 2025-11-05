@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MediaLayout } from '../media-layout';
+import { MediaLayoutImage } from '../media-layout';
 
 @Component({
   selector: 'app-medialayout',
@@ -8,5 +8,5 @@ import { MediaLayout } from '../media-layout';
   styleUrl: './medialayout.css'
 })
 export class Medialayout {
-  @Input() mediaLayout!:MediaLayout;
+  @Input() mediaLayout!:MediaLayoutImage;
 }
