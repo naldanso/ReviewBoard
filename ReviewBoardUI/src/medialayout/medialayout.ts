@@ -7,6 +7,6 @@ import { MediaLayoutImage } from '../media-layout';
   templateUrl: './medialayout.html',
   styleUrl: './medialayout.css'
 })
-export class Medialayout {
+export class MediaLayout {
   @Input() mediaLayout!:MediaLayoutImage;
 }
