@@ -10,12 +10,12 @@ import { MediaLayoutImage } from '../media-layout';
   styleUrl: './home.css'
 })
 export class Home {
-  readonly imageUrl = "/img";
+  readonly imageUrl = 'img';
 
   //this is called a property. you can also make this an array.
   mediaLayout: MediaLayoutImage = {
     id: 123,
-    photo: '${this.baseUrl}/photographer-at-sunset-silhouette.jpg',
+    photo: `${this.imageUrl}/photographer-at-sunset-silhouette.jpg`,
     date: '10/14/2025'
   };
 
