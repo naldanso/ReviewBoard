@@ -1,12 +1,14 @@
-<section class="mediagrid3x3">
+<section class="media">
   <!-- this will eventually be the
     image stuff
 
     <img src="/assets/photographer-at-sunset-silhouette.jpg">
   -->
-  <img class="grid-photos"
-       [src]="mediaLayout.photo"
-       alt="A provided image uploaded on {{mediaLayout.date}}">
+  <img
+      class="media-image"
+      [src]="mediaLayout().photo"
+      alt="image uploaded on {{ mediaLayout().date }}"
+  />
 
   <p>medialayout works!</p>
 
