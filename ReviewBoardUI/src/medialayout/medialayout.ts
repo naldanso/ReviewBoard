@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { MediaLayoutImage } from '../media-layout';
+import { IMediaLayout } from '../media-layout';
 
 @Component({
   selector: 'app-medialayout',
@@ -9,5 +9,5 @@ import { MediaLayoutImage } from '../media-layout';
 })
 export class MediaLayout {
   //this listens for inputs of type MediaLayoutImage
-  mediaLayout = input.required<MediaLayoutImage>();
+  mediaInput = input.required<IMediaLayout>();
 }

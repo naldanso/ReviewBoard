@@ -2,6 +2,8 @@
   <app-searchbar></app-searchbar>
 </section>
 <section class="media-results">
-  <app-medialayout [mediaLayout]="mediaLayout"></app-medialayout>
+  @for(mediaUnit of mediaArr; track $index){
+    <app-medialayout [mediaInput]="mediaUnit"></app-medialayout>
+  }
 </section>
 
