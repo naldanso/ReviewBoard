@@ -1,8 +1,11 @@
 <section>
-  <app-searchbar></app-searchbar>
+  <form>
+    <input type="text" placeholder="Find something to review" #filter />
+    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+  </form>
 </section>
 <section class="media-results">
-  @for(mediaUnit of mediaArr; track $index){
+  @for(mediaUnit of filteredMediaArr; track $index){
     <app-medialayout [mediaInput]="mediaUnit"></app-medialayout>
   }
 </section>

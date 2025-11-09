@@ -14,6 +14,8 @@ export class Details {
   mediaService = inject(Mediaservice);
   mediaImage: IMediaLayout | undefined;
 
+  //we'll add functionality here for viewing and posting comments, as well as rating, sharing
+
   constructor(){
     const mediaId = Number(this.route.snapshot.params['id']);
     this.mediaImage = this.mediaService.getMediaById(mediaId);

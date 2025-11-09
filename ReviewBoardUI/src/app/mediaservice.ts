@@ -48,4 +48,6 @@ export class Mediaservice {
   getMediaById(id: number): IMediaLayout | undefined {
     return this.mediaArr.find((media) => media.id == id);
   }
+
+  //we'll provide functionality to upload photos
 }
