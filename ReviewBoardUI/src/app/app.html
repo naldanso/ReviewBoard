@@ -3,15 +3,15 @@
 
 <!DOCTYPE html>
 <main>
-  <header class="brand-name">
+  <a [routerLink]="['/']">
     <!-- this h1 will eventually become the logo.
     we will include an <img> tag with the class and everything -->
     <header class="brand-name">
       <h1>Review Board</h1>
     </header>
-    <!-- this contains the meat of the application. all the stuff you see -->
-    <section class="content">
-      <app-home></app-home>
-    </section>
-  </header>
+  </a>
+  <!-- this contains the meat of the application. all the stuff you see -->
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
 </main>

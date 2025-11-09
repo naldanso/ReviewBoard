@@ -9,7 +9,6 @@
       [src]="mediaInput().photo"
       alt="image uploaded on {{ mediaInput().date }}"
   />
-
-  <p>medialayout works!</p>
-
+  <a [routerLink]="['/details', mediaInput().id]">Learn More</a>
+  <hr>
 </section>

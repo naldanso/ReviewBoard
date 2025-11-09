@@ -1,9 +1,10 @@
 import { Component, input } from '@angular/core';
 import { IMediaLayout } from '../media-layout';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-medialayout',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './medialayout.html',
   styleUrl: './medialayout.css'
 })
