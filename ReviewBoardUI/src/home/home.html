@@ -1,8 +1,13 @@
-<section>
-  <form>
-    <input type="text" placeholder="Find something to review" #filter />
-    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
-  </form>
+<section class="navbar-container">
+  <section class="left-section">
+    <form>
+      <input type="text" placeholder="Find something to review" #filter />
+      <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+    </form>
+  </section>
+  <section class="right-section">
+    <!--This will contain the account-settings/site-theme part of the navigation bar-->
+  </section>
 </section>
 <section class="media-results">
   @for(mediaUnit of filteredMediaArr; track $index){

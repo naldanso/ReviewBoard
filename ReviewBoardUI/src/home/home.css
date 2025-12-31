@@ -1,0 +1,13 @@
+.navbar-container {
+  width: 100%;
+}
+
+.left-section {
+  width: 50%;
+}
+
+.right-section {
+  position: relative;
+  left: 664px;
+  width: 50%;
+}
