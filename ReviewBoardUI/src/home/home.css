@@ -9,5 +9,51 @@
 .right-section {
   position: relative;
   left: 664px;
+}
+
+input[type=text] {
   width: 50%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 20px;
+  font-style: italic;
+  color: #555;
+  background-color: white;
+  background-image: url('../../public/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  margin-right: 10px;
+}
+
+.primary {
+  background-color: white;
+  border: 0px solid black;
+  border-radius: 9px;
+  font-size: 25px;
+  font-family: Helvetica;
+  transition: 0.5s;
+}
+
+.primary:hover {
+  background-color: black;
+  color: white;
+}
+
+.account-and-theme {
+  display: inline;
+}
+
+.account-and-theme li {
+  display: inline;
+}
+
+.ul-image {
+  height: 30px;
+  width: 30px;
+}
+
+.ul-image:hover {
+  background-color: red;
 }
