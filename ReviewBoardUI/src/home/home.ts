@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { MediaLayout } from '../medialayout/medialayout';
 import { IMediaLayout } from '../media-layout';
 import { Mediaservice } from '../app/mediaservice';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-home',
-  imports: [ MediaLayout],
+  imports: [ MediaLayout, MatGridListModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

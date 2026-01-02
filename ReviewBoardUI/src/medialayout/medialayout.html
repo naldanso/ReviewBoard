@@ -1,10 +1,9 @@
 <!-- this is how a single image/video will show up in the HTML -->
 <section class="media-unit">
-  <img
-      [src]="mediaInput().photo"
-      alt="image uploaded on {{ mediaInput().date }}"
-      style="max-width:30%;height:auto;"
-  />
-  <a [routerLink]="['/details', mediaInput().id]">Learn More</a>
-  <hr>
+  <a [routerLink]="['/details', mediaInput().id]">
+    <img
+        [src]="mediaInput().photo"
+        alt="image uploaded on {{ mediaInput().date }}"
+    />
+  </a>
 </section>

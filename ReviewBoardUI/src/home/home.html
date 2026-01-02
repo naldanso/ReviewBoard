@@ -18,9 +18,13 @@
 
 <!-- this contains the logic to display the array of images/videos on the home page -->
 <section class="media-results">
-  <!-- literally just a for-loop. -->
-  @for(mediaUnit of filteredMediaArr; track $index){
-    <app-medialayout [mediaInput]="mediaUnit"></app-medialayout>
-  }
+  <mat-grid-list cols="3">
+    <!-- literally just a for-loop. -->
+    @for(mediaUnit of filteredMediaArr; track $index){
+    <mat-grid-tile>
+      <app-medialayout [mediaInput]="mediaUnit"></app-medialayout>
+    </mat-grid-tile>
+    }
+  </mat-grid-list>
 </section>
 
