@@ -29,7 +29,7 @@ input[type=text] {
 
 .primary {
   background-color: white;
-  border: 0px solid black;
+  border: 2px solid black;
   border-radius: 9px;
   font-size: 25px;
   font-family: Helvetica;
@@ -56,4 +56,13 @@ input[type=text] {
 
 .ul-image:hover {
   background-color: red;
+}
+
+.tile-image {
+  width: 100%;
+  height: auto;
+}
+
+.grid-tile {
+  border-radius: 20px;
 }

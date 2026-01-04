@@ -2,7 +2,7 @@
 <section class="navbar-container">
   <section class="left-section">
     <form>
-      <input type="text" placeholder="Find something to review" #filter />
+      <input id="home-search-bar" type="text" placeholder="Find something to review" #filter />
       <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
     </form>
   </section>
@@ -18,11 +18,13 @@
 
 <!-- this contains the logic to display the array of images/videos on the home page -->
 <section class="media-results">
-  <mat-grid-list cols="3">
+  <mat-grid-list cols="3" rowHeight="6:4" gutterSize="8">
     <!-- literally just a for-loop. -->
     @for(mediaUnit of filteredMediaArr; track $index){
-    <mat-grid-tile>
-      <app-medialayout [mediaInput]="mediaUnit"></app-medialayout>
+    <mat-grid-tile class="grid-tile">
+      <a [routerLink]="['/details', mediaUnit.id]">
+        <img class="tile-image" [src]="mediaUnit.photo" alt="image uploaded on {{mediaUnit.date}}">
+      </a>
     </mat-grid-tile>
     }
   </mat-grid-list>
