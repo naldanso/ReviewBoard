@@ -1,13 +1,13 @@
 import { Component, inject } from '@angular/core';
-import { MediaLayout } from '../medialayout/medialayout';
 import { IMediaLayout } from '../media-layout';
 import { Mediaservice } from '../app/mediaservice';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RouterModule } from '@angular/router';
+import { MediaUnit } from '../app/media-unit/media-unit';
 
 @Component({
   selector: 'app-home',
-  imports: [ MediaLayout, MatGridListModule, RouterModule],
+  imports: [MediaUnit, MatGridListModule, RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

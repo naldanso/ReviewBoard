@@ -22,9 +22,7 @@
     <!-- literally just a for-loop. -->
     @for(mediaUnit of filteredMediaArr; track $index){
     <mat-grid-tile class="grid-tile">
-      <a [routerLink]="['/details', mediaUnit.id]">
-        <img class="tile-image" [src]="mediaUnit.photo" alt="image uploaded on {{mediaUnit.date}}">
-      </a>
+      <app-media-unit [mediaInput]="mediaUnit"></app-media-unit>
     </mat-grid-tile>
     }
   </mat-grid-list>

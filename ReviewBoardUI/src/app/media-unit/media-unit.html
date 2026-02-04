@@ -1,6 +1,6 @@
-<!-- this is how a single image/video will show up in the HTML -->
+<!-- this is how a single image/video will show up in the HTML. -->
 <section class="media-unit">
-  <a [routerLink]="['/details', mediaInput().id]">
+  <a routerLink="['/details', mediaInput().id]">
     <img
         [src]="mediaInput().photo"
         alt="image uploaded on {{ mediaInput().date }}"
