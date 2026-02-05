@@ -3,7 +3,7 @@
   <section class="left-section">
     <form>
       <input id="home-search-bar" type="text" placeholder="Find something to review" #filter />
-      <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+      <button class="primary" type="button" (click)="setId(filter.value)">Search</button>
     </form>
   </section>
   <section class="right-section">
@@ -16,15 +16,4 @@
   </section>
 </section>
 
-<!-- this contains the logic to display the array of images/videos on the home page -->
-<section class="media-results">
-  <mat-grid-list cols="3" rowHeight="6:4" gutterSize="8">
-    <!-- literally just a for-loop. -->
-    @for(mediaUnit of filteredMediaArr; track $index){
-    <mat-grid-tile class="grid-tile">
-      <app-media-unit [mediaInput]="mediaUnit"></app-media-unit>
-    </mat-grid-tile>
-    }
-  </mat-grid-list>
-</section>
-
+<app-media-layout [photoId]="mediaId"></app-media-layout>

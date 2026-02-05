@@ -4,10 +4,11 @@ import { Mediaservice } from '../app/mediaservice';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RouterModule } from '@angular/router';
 import { MediaUnit } from '../app/media-unit/media-unit';
+import { MediaLayout } from '../app/media-layout/media-layout';
 
 @Component({
   selector: 'app-home',
-  imports: [MediaUnit, MatGridListModule, RouterModule],
+  imports: [MediaUnit, MatGridListModule, RouterModule, MediaLayout],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -21,26 +22,17 @@ export class Home {
   filteredMediaArr: IMediaLayout[] = [];
   //the service that we read our images from
   mediaService: Mediaservice = inject(Mediaservice);
+  //user-input media ID.
+  mediaId: string;
 
-  //expects an ID of type string. this is called when we use the search bar
-  filterResults(idNumber: string){
-    //if nothing is typed into search bar, reset filtered images to show entire array
-    if(!idNumber){
-      this.filteredMediaArr = this.mediaArr;
-      return;
-    }
-
-    //otherwise, show only the image you searched for
-    this.filteredMediaArr = this.mediaArr.filter((mediaUnit) => mediaUnit.id === parseInt(idNumber));
+  //logs the value from the search form.
+  setId(idNumber: string){
+    this.mediaId = idNumber;
+    console.log(`${this.mediaId} has been set.`);
   }
 
   //this is where we initially set up the data/class members
   constructor() {
-
-    //populate mediaArr with data from MediaService class
-    this.mediaArr = this.mediaService.getAllMedia();
-
-    //set the filtered array to that same mediaArr
-    this.filteredMediaArr = this.mediaArr;
+    this.mediaId = "";
   }
 }
