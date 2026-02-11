@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
 import { IMediaLayout } from '../../media-layout';
 import { Mediaservice } from '../mediaservice';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -15,27 +15,22 @@ export class MediaLayout {
   readonly imageUrl = 'img';
 
   //this is the Id of a post that someone enters in the search bar
-  photoId = input.required<string>();
+  filteredID = input.required<string>();
 
   //variables to hold forms of an array of media fetched from the backend. for now,
   //the backend is a service object called Mediaservice.
   mediaArr: IMediaLayout[] = [];
-  filteredMediaArr: IMediaLayout[] = [];
   mediaService: Mediaservice = inject(Mediaservice);
 
   //filter images shown based on what the user enters in the home page search bar.
-  filterResults(){
-    if(!this.photoId()){
-      this.filteredMediaArr = this.mediaArr;
-      return;
+  filterResults = computed( () => {
+    if(!this.filteredID()){
+      return this.mediaArr;
     }
-
-    console.log(this.photoId());
-    this.filteredMediaArr = this.mediaArr.filter((mediaUnit) => mediaUnit.id === parseInt(this.photoId()));
-  }
+    return this.mediaArr.filter( (unit) => unit.id === parseInt(this.filteredID()) );
+  } );
 
   constructor(){
     this.mediaArr = this.mediaService.getAllMedia();
-    this.filteredMediaArr = this.mediaArr;
   }
 }

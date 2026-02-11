@@ -27,7 +27,6 @@ export class Home {
   //logs the value from the search form.
   setId(idNumber: string){
     this.mediaId = idNumber;
-    console.log(`${this.mediaId} has been set.`);
   }
 
   //this is where we initially set up the data/class members

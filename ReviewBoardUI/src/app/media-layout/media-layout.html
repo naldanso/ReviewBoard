@@ -2,7 +2,7 @@
 <section class="media-results">
   <mat-grid-list cols="3" rowHeight="6:4" gutterSize="8">
     <!-- for loop to go through images -->
-    @for(mediaUnit of filteredMediaArr; track $index){
+    @for(mediaUnit of filterResults(); track $index){
     <mat-grid-tile class="grid-tile">
       <app-media-unit [mediaInput]="mediaUnit"></app-media-unit>
     </mat-grid-tile>
