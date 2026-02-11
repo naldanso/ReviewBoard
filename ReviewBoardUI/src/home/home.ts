@@ -3,12 +3,11 @@ import { IMediaLayout } from '../media-layout';
 import { Mediaservice } from '../app/mediaservice';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RouterModule } from '@angular/router';
-import { MediaUnit } from '../app/media-unit/media-unit';
 import { MediaLayout } from '../app/media-layout/media-layout';
 
 @Component({
   selector: 'app-home',
-  imports: [MediaUnit, MatGridListModule, RouterModule, MediaLayout],
+  imports: [ MatGridListModule, RouterModule, MediaLayout],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
