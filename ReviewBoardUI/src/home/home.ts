@@ -22,15 +22,11 @@ export class Home {
   //the service that we read our images from
   mediaService: Mediaservice = inject(Mediaservice);
   //user-input media ID.
-  mediaId: string;
+  mediaId = "";
 
   //logs the value from the search form.
   setId(idNumber: string){
     this.mediaId = idNumber;
   }
 
-  //this is where we initially set up the data/class members
-  constructor() {
-    this.mediaId = "";
-  }
 }

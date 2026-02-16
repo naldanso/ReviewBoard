@@ -15,12 +15,12 @@ export class MediaLayout {
   readonly imageUrl = 'img';
 
   //this is the Id of a post that someone enters in the search bar
-  filteredID = input.required<string>();
+  readonly filteredID = input.required<string>();
 
   //variables to hold forms of an array of media fetched from the backend. for now,
   //the backend is a service object called Mediaservice.
-  mediaArr: IMediaLayout[] = [];
   mediaService: Mediaservice = inject(Mediaservice);
+  readonly mediaArr: IMediaLayout[] = this.mediaService.getAllMedia();
 
   //filter images shown based on what the user enters in the home page search bar.
   filterResults = computed( () => {
@@ -30,7 +30,4 @@ export class MediaLayout {
     return this.mediaArr.filter( (unit) => unit.id === parseInt(this.filteredID()) );
   } );
 
-  constructor(){
-    this.mediaArr = this.mediaService.getAllMedia();
-  }
 }

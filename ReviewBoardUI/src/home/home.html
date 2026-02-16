@@ -1,10 +1,8 @@
 <!-- this contains the navigation bar, including the search bar, account button, and website theme buttons -->
 <section class="navbar-container">
   <section class="left-section">
-    <form>
-      <input id="home-search-bar" type="text" placeholder="Find something to review" #filter />
-      <button class="primary" type="button" (click)="setId(filter.value)">Search</button>
-    </form>
+    <input id="home-search-bar" type="text" placeholder="Find something to review" (keydown.enter)="$event.preventDefault()" #filter />
+    <button class="primary" type="button" (click)="setId(filter.value)">Search</button>
   </section>
   <section class="right-section">
     <!--This will contain the account-settings/site-theme part of the navigation bar-->
